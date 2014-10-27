@@ -1,0 +1,28 @@
+<form action="/" method="post">
+  <input type="text" name="post[full_link]">
+  <input type="submit" value="SHORTEN">
+</form>
+
+<%= @error %>
+
+<ul>
+  <% @all_url.each do |url|%>
+    <a href= <%= url.shorten_link %> > <li> <%= url.shorten_link %></li> </a>
+    <li> <%= url.full_link %> </li>
+    <br>
+  <% end %>
+</ul>
+
+
+<!--
+<form name="select_box" action="cool_url" method="POST">
+  <input type="text" name="post[title]">
+  <input type="text" name="post[price]">
+  <textarea name="post[description]"></textarea>
+  <select name="select_box">
+    <option>Milk</option>
+    <option>Coffee</option>
+    <option>Tea</option>
+    <input type="submit">
+  </select>
+</form> -->
